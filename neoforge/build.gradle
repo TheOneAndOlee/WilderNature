@@ -94,8 +94,10 @@ publishing {
     }
 }
 
+var temp_api_key = 'TEST_KEY'
+
 modrinth {
-    token = System.getenv("MODRINTH_TOKEN")
+    token = temp_api_key
     projectId = "lets-do-wildernature"
     versionNumber = rootProject.mod_version
     versionName = "${rootProject.archives_base_name}-${rootProject.mod_version} [${rootProject.minecraft_version}-neoforge]"
@@ -113,7 +115,7 @@ modrinth {
 }
 
 curseforge {
-    apiKey = System.getenv("CURSEFORGE_API_KEY")
+    apiKey = temp_api_key
     project {
         id = "1071657"
         releaseType = "release"
